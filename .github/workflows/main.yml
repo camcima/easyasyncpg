@@ -32,6 +32,8 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
@@ -62,7 +64,15 @@ jobs:
           DB_NAME: easyasyncpg
           DB_PORT: 5432
         run: |
-          poetry run coverage run -m pytest -vvvv
-      - name: Coverage report
+          poetry run coverage run -m pytest tests/ -vvvv
+      - name: Run Coverage export XML
+        run: |
+          poetry run coverage xml -o ./coverage.xml
+      - name: Run Coverage Report
         run: |
           poetry run coverage report
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

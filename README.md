@@ -1,4 +1,14 @@
-# EasyAsyncPg
+<h1 align="center">EasyAsyncPg</h1>
+<p align="center"><i>Wrapper for asyncpg that makes it easier to use and adds new functionalities</i></p>
+
+<div align="center">
+    <a href="https://www.python.org/downloads/release/python-3110/"><img src="https://img.shields.io/badge/python-3.11-blue.svg" alt="Python 3.11"/></a>
+    <a href="https://github.com/camcima/easyasyncpg/actions/workflows/main.yml"><img src="https://github.com/camcima/easyasyncpg/actions/workflows/main.yml/badge.svg" alt="build status"/></a>
+    <a href="https://sonarcloud.io/component_measures?id=camcima_easyasyncpg&metric=coverage&view=list"><img src="https://sonarcloud.io/api/project_badges/measure?project=camcima_easyasyncpg&metric=coverage" alt="Coverage">
+    <a href="https://sonarcloud.io/project/issues?resolved=false&types=VULNERABILITY&id=loggi_loggy"><img src="https://sonarcloud.io/api/project_badges/measure?project=camcima_easyasyncpg&metric=vulnerabilities" alt="Vulnerabilities">
+    <a href="https://sonarcloud.io/project/issues?resolved=false&types=BUG&id=camcima_easyasyncpg"><img src="https://sonarcloud.io/api/project_badges/measure?project=camcima_easyasyncpg&metric=bugs" alt="Bugs">
+    <a href="https://sonarcloud.io/summary/overall?id=camcima_easyasyncpg"><img src="https://sonarcloud.io/api/project_badges/measure?project=camcima_easyasyncpg&metric=alert_status" alt="Quality Gate Status">
+</div>
 
 ## Introduction
 
