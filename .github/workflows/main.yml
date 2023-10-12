@@ -60,7 +60,7 @@ jobs:
         run: |
           poetry lock
           poetry install --all-extras
-      - name: Flake8
+      - name: Ruff
         run: |
           poetry run ruff .
       - name: MyPy
@@ -68,13 +68,13 @@ jobs:
           poetry run mypy .
       - name: Test with pytest
         env:
-          DB_HOST: postgres
+          DB_HOST: localhost
           DB_USER: postgres
           DB_PASSWORD: postgres
           DB_NAME: easyasyncpg
           DB_PORT: 5432
         run: |
-          poetry run coverage run -m pytest
+          poetry run coverage run -m pytest -vvvv
       - name: Coverage report
         run: |
           poetry run coverage report
